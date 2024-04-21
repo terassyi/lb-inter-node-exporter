@@ -17,7 +17,6 @@ pub async fn get_ifaces(ifaces: &[String]) -> Result<Vec<Iface>, Error> {
         regex_ifaces.push(r_iface);
     }
     let iface_list = list_link().await?;
-    tracing::info!(link_list=?iface_list, "Link list");
 
     let filter = |name: &str| -> bool {
         for r_i in regex_ifaces.iter() {

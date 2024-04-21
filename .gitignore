@@ -13,3 +13,4 @@ Cargo.lock
 **/*.rs.bk
 /bin
 .lab.yaml.bak
+clab-lb-inter-node-exporter

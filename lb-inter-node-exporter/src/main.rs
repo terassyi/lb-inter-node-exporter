@@ -67,7 +67,6 @@ async fn main() -> Result<(), anyhow::Error> {
     trace::prepare_tracing(&cmd.log_level, &cmd.metrics_endpoint);
 
     let target_ifaces = get_ifaces(&cmd.iface).await.unwrap();
-    tracing::info!(target=?target_ifaces, input=?cmd.iface,"Target NIC");
 
     // Bump the memlock rlimit. This is needed for older kernels that don't use the
     // new memcg based accounting, see https://lwn.net/Articles/837122/
