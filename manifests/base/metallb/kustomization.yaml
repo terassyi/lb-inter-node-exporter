@@ -1,0 +1,4 @@
+resources:
+  - announce.yaml
+  - bgp.yaml
+  - pool.yaml

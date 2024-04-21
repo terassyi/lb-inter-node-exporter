@@ -1,0 +1,3 @@
+{
+  "rust-analyzer.linkedProjects": ["Cargo.toml", "lb-inter-node-exporter-ebpf/Cargo.toml"]
+}

@@ -1,0 +1,2 @@
+[workspace]
+members = ["xtask", "lb-inter-node-exporter", "lb-inter-node-exporter-common"]

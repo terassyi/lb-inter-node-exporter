@@ -1,0 +1,51 @@
+apiVersion: metallb.io/v1beta2
+kind: BGPPeer
+metadata:
+  name: cp
+  namespace: metallb-system
+spec:
+  myASN: 64501
+  peerASN: 65000
+  peerAddress: 169.254.1.1
+  nodeSelectors:
+    - matchLabels:
+        kubernetes.io/hostname: lb-inter-node-exporter-control-plane
+---
+apiVersion: metallb.io/v1beta2
+kind: BGPPeer
+metadata:
+  name: worker
+  namespace: metallb-system
+spec:
+  myASN: 64502
+  peerASN: 65000
+  peerAddress: 169.254.2.1
+  nodeSelectors:
+    - matchLabels:
+        kubernetes.io/hostname: lb-inter-node-exporter-worker
+---
+apiVersion: metallb.io/v1beta2
+kind: BGPPeer
+metadata:
+  name: worker2
+  namespace: metallb-system
+spec:
+  myASN: 64503
+  peerASN: 65000
+  peerAddress: 169.254.3.1
+  nodeSelectors:
+    - matchLabels:
+        kubernetes.io/hostname: lb-inter-node-exporter-worker2
+---
+apiVersion: metallb.io/v1beta2
+kind: BGPPeer
+metadata:
+  name: worker3
+  namespace: metallb-system
+spec:
+  myASN: 64504
+  peerASN: 65000
+  peerAddress: 169.254.4.1
+  nodeSelectors:
+    - matchLabels:
+        kubernetes.io/hostname: lb-inter-node-exporter-worker3

@@ -1,0 +1,43 @@
+[package]
+name = "lb-inter-node-exporter"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+aya = "0.12"
+aya-log = "0.2"
+clap = { version = "4.1", features = ["derive"] }
+lb-inter-node-exporter-common = { path = "../lb-inter-node-exporter-common", features = [
+	"user",
+] }
+anyhow = "1"
+env_logger = "0.11.3"
+libc = "0.2"
+log = "0.4"
+tokio = { version = "1.25", features = [
+	"macros",
+	"rt",
+	"rt-multi-thread",
+	"net",
+	"signal",
+] }
+kube = { version = "0.90.0", features = ["client", "runtime"] }
+k8s-openapi = { version = "0.21.1", features = ["schemars", "v1_29"] }
+tracing = "0.1.40"
+opentelemetry = { version = "0.22.0", features = ["trace"] }
+tracing-subscriber = { version = "0.3.18", features = ["json", "env-filter"] }
+opentelemetry-otlp = "0.15.0"
+opentelemetry_sdk = "0.22.1"
+regex = "1.10.4"
+thiserror = "1.0.58"
+rtnetlink = "0.14.1"
+netlink-packet-route = "0.19.0"
+# netlink-packet-route = "0.20.0"
+futures = "0.3.30"
+actix-web = "4.5.1"
+prometheus = "0.13.3"
+
+[[bin]]
+name = "lb-inter-node-exporter"
+path = "src/main.rs"

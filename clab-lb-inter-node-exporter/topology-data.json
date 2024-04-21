@@ -1,0 +1,267 @@
+{
+  "name": "lb-inter-node-exporter",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-9821c7674bb4",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "2001:172:20:20::/64",
+        "ipv6-gw": "2001:172:20:20::1",
+        "mtu": 1500,
+        "external-access": true
+      }
+    }
+  },
+  "nodes": {
+    "client0": {
+      "index": "0",
+      "shortname": "client0",
+      "longname": "clab-lb-inter-node-exporter-client0",
+      "fqdn": "client0.lb-inter-node-exporter.io",
+      "group": "",
+      "labdir": "/home/terassyi/workspace/lb-inter-node-exporter/clab-lb-inter-node-exporter/client0",
+      "kind": "linux",
+      "image": "ghcr.io/terassyi/terakoya:0.1.2",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-9821c7674bb4",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/terassyi/workspace/lb-inter-node-exporter/clab-lb-inter-node-exporter/client0",
+        "clab-node-name": "client0",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/terassyi/workspace/lb-inter-node-exporter/lab.yaml",
+        "containerlab": "lb-inter-node-exporter"
+      },
+      "port-bindings": [
+      ]
+    },
+    "control-plane0": {
+      "index": "1",
+      "shortname": "control-plane0",
+      "longname": "clab-lb-inter-node-exporter-control-plane0",
+      "fqdn": "control-plane0.lb-inter-node-exporter.io",
+      "group": "",
+      "labdir": "/home/terassyi/workspace/lb-inter-node-exporter/clab-lb-inter-node-exporter/control-plane0",
+      "kind": "linux",
+      "image": "nicolaka/netshoot:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-9821c7674bb4",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/terassyi/workspace/lb-inter-node-exporter/clab-lb-inter-node-exporter/control-plane0",
+        "clab-node-name": "control-plane0",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/terassyi/workspace/lb-inter-node-exporter/lab.yaml",
+        "containerlab": "lb-inter-node-exporter"
+      },
+      "port-bindings": [
+      ]
+    },
+    "router0": {
+      "index": "2",
+      "shortname": "router0",
+      "longname": "clab-lb-inter-node-exporter-router0",
+      "fqdn": "router0.lb-inter-node-exporter.io",
+      "group": "",
+      "labdir": "/home/terassyi/workspace/lb-inter-node-exporter/clab-lb-inter-node-exporter/router0",
+      "kind": "linux",
+      "image": "frrouting/frr:v8.4.0",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-9821c7674bb4",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/terassyi/workspace/lb-inter-node-exporter/clab-lb-inter-node-exporter/router0",
+        "clab-node-name": "router0",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/terassyi/workspace/lb-inter-node-exporter/lab.yaml",
+        "containerlab": "lb-inter-node-exporter"
+      },
+      "port-bindings": [
+      ]
+    },
+    "worker0": {
+      "index": "3",
+      "shortname": "worker0",
+      "longname": "clab-lb-inter-node-exporter-worker0",
+      "fqdn": "worker0.lb-inter-node-exporter.io",
+      "group": "",
+      "labdir": "/home/terassyi/workspace/lb-inter-node-exporter/clab-lb-inter-node-exporter/worker0",
+      "kind": "linux",
+      "image": "nicolaka/netshoot:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-9821c7674bb4",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/terassyi/workspace/lb-inter-node-exporter/clab-lb-inter-node-exporter/worker0",
+        "clab-node-name": "worker0",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/terassyi/workspace/lb-inter-node-exporter/lab.yaml",
+        "containerlab": "lb-inter-node-exporter"
+      },
+      "port-bindings": [
+      ]
+    },
+    "worker1": {
+      "index": "4",
+      "shortname": "worker1",
+      "longname": "clab-lb-inter-node-exporter-worker1",
+      "fqdn": "worker1.lb-inter-node-exporter.io",
+      "group": "",
+      "labdir": "/home/terassyi/workspace/lb-inter-node-exporter/clab-lb-inter-node-exporter/worker1",
+      "kind": "linux",
+      "image": "nicolaka/netshoot:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-9821c7674bb4",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/terassyi/workspace/lb-inter-node-exporter/clab-lb-inter-node-exporter/worker1",
+        "clab-node-name": "worker1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/terassyi/workspace/lb-inter-node-exporter/lab.yaml",
+        "containerlab": "lb-inter-node-exporter"
+      },
+      "port-bindings": [
+      ]
+    },
+    "worker2": {
+      "index": "5",
+      "shortname": "worker2",
+      "longname": "clab-lb-inter-node-exporter-worker2",
+      "fqdn": "worker2.lb-inter-node-exporter.io",
+      "group": "",
+      "labdir": "/home/terassyi/workspace/lb-inter-node-exporter/clab-lb-inter-node-exporter/worker2",
+      "kind": "linux",
+      "image": "nicolaka/netshoot:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-9821c7674bb4",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/terassyi/workspace/lb-inter-node-exporter/clab-lb-inter-node-exporter/worker2",
+        "clab-node-name": "worker2",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/terassyi/workspace/lb-inter-node-exporter/lab.yaml",
+        "containerlab": "lb-inter-node-exporter"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "router0",
+        "interface": "net0",
+        "mac": "aa:c1:ab:c7:8c:00",
+        "peer": "z"
+      },
+      "z": {
+        "node": "control-plane0",
+        "interface": "net0",
+        "mac": "aa:c1:ab:dd:8e:02",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "router0",
+        "interface": "net1",
+        "mac": "aa:c1:ab:d5:16:7b",
+        "peer": "z"
+      },
+      "z": {
+        "node": "worker0",
+        "interface": "net0",
+        "mac": "aa:c1:ab:83:40:b7",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "router0",
+        "interface": "net2",
+        "mac": "aa:c1:ab:ad:fd:99",
+        "peer": "z"
+      },
+      "z": {
+        "node": "worker1",
+        "interface": "net0",
+        "mac": "aa:c1:ab:28:29:37",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "router0",
+        "interface": "net3",
+        "mac": "aa:c1:ab:ba:e9:e0",
+        "peer": "z"
+      },
+      "z": {
+        "node": "worker2",
+        "interface": "net0",
+        "mac": "aa:c1:ab:7e:0d:0f",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "router0",
+        "interface": "net4",
+        "mac": "aa:c1:ab:1e:c6:8f",
+        "peer": "z"
+      },
+      "z": {
+        "node": "client0",
+        "interface": "net0",
+        "mac": "aa:c1:ab:29:36:cd",
+        "peer": "a"
+      }
+    }
+  ]
+}
